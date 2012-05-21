@@ -20,7 +20,7 @@ Content-Type: application/x-www-form-urlencoded";
 @date = localtime;
 
 $datestr = sprintf("%04d%02d%02d-%02d%02d%02d",
-                   $date[5]+1900,$date[4],$date[3],$date[2],$date[1],$date[0]);
+                   $date[5]+1900,$date[4]+1,$date[3],$date[2],$date[1],$date[0]);
 
 open(CACHE,">/tmp/ptp-bssid-update-html-$datestr") or die "open: $!";
 open(RESULT,">ptp-bssid-update-download-$datestr") or die "open: $!";
